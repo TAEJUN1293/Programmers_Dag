@@ -48,7 +48,6 @@ def load(schema, table, records):
             area float
         );""")
         for record in records:
-            # 따옴표 처리를 위해 파라미터 바인딩 사용
             sql = f"INSERT INTO {schema}.{table} VALUES (%s, %s, %s);"
             cur.execute(sql, record)
         cur.execute("COMMIT;")   
