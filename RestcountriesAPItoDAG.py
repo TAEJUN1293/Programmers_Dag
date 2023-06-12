@@ -1,10 +1,9 @@
 from airflow import DAG
-from airflow.decorators import task
 from airflow.providers.postgres.hooks.postgres import PostgresHook
+from airflow.decorators import task
 
 from datetime import datetime, timedelta
 from pandas import Timestamp
-
 import pandas as pd
 import logging
 import requests
