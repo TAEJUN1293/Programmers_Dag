@@ -6,13 +6,13 @@ SELECT LEFT(created_at, 10) AS date,
   ROUND(SUM(CASE
     WHEN score >= 9 THEN 1 
     WHEN score <= 6 THEN -1 END)::float*100/COUNT(1), 2)
-FROM keeyong.nps
+FROM taejun3305.nps
 GROUP BY 1
 ORDER BY 1;""",
           'input_check':
           [
             {
-              'sql': 'SELECT COUNT(1) FROM keeyong.nps',
+              'sql': 'SELECT COUNT(1) FROM taejun3305.nps',
               'count': 150000
             },
           ],
