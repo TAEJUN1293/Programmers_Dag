@@ -21,6 +21,6 @@ def send_message_to_a_slack_channel(message, emoji):
     headers = {
         'content-type': 'application/json',
     }
-    data = { "username": "Data GOD", "text": message, "icon_emoji": emoji }
+    data = { "username": "Data Alert", "text": message, "icon_emoji": emoji }
     r = requests.post(url, json=data, headers=headers)
     return r
